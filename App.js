@@ -1,7 +1,7 @@
 import 'react-native-gesture-handler';
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
-import IndexScreen from './screens/indexScreen';
+import IndexScreen from './src/screens/indexScreen';
 
 const navigator = createStackNavigator({
   Index: IndexScreen,
@@ -11,3 +11,5 @@ const navigator = createStackNavigator({
     title: 'Blogs',
   }
 });
+
+export default createAppContainer(navigator);
