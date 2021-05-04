@@ -7,7 +7,7 @@ const IndexScreen = ({ navigation }) => {
   const { state, addBlogPost, deleteBlogPost } = useContext(Context);
 
   return (
-    <TouchableOpacity onPress={() => navigation.navigate('Show')}>
+    <TouchableOpacity onPress={() => navigation.navigate('Show', { id: item.id })}>
       <View>
         <Button title="Add post" onPress={addBlogPost} />
         <FlatList
