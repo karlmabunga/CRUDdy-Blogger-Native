@@ -5,14 +5,26 @@ import { Context } from '../context/BlogContext';
 const CreateScreen = ({ navigation }) => {
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
+  const { addBlogPost } = useContext(Context);
 
   return (
     <View>
       <Text style={styles.label}>Enter Title:</Text>
-      <TextInput value={title} onChangeText={(text) => setTitle(text) } style={styles.input} />
+      <TextInput
+        value={title}
+        onChangeText={(text) => setTitle(text)}
+        style={styles.input}
+      />
       <Text style={styles.label}>Enter Content:</Text>
-      <TextInput value={content} onChangeText={(text) => setContent(text)} style={styles.input} />
-      <Button title='Add Blog Post'/>
+      <TextInput
+        value={content}
+        onChangeText={(text) => setContent(text)}
+        style={styles.input}
+      />
+      <Button
+        title='Add Blog Post'
+        onPress={() => addBlogPost(title, content)}
+      />
     </View>
   );
 };
