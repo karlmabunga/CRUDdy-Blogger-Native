@@ -6,3 +6,9 @@ This repo will demonstrate how to:
 - Read posts
 - Update posts
 - Delete / Destroy posts
+
+
+## To get started run: ##
+`npm start`
+`npm run db`
+`npm run tunnel`
